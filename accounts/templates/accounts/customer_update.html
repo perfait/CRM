@@ -1,25 +1,14 @@
-<!DOCTYPE html>
-
+{%  extends 'accounts/main.html' %}
 {% load static %}
+{% block content %}
 
 
-<html>
-<head>
-	<title>CRM</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-	<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
-    {%  include 'accounts/navbar.html' %}
-</head>
-
-<body class="customer-update">
 <style>
-  body.customer-update {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+.content-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 75vh; /* Optionally, make the content container fill the viewport height */
 }
 
 .card {
@@ -43,6 +32,7 @@ form input[type="password"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  font-size: 14px;
 }
 
 form input[type="submit"] {
@@ -53,32 +43,24 @@ form input[type="submit"] {
   padding: 10px 15px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 15px;
 }
 
 form input[type="submit"]:hover {
   background: #0056b3;
 }
+
+
 </style>
 
 
-
-		<div class="container-fluid">
-			<div class="card">
-				<form action="" method="POST">
-					{% csrf_token %}
-					{{ form }}
-					<input type="submit" name="Submit">
-				</form>
-			</div>
-		</div>
-</body>
-
-	<hr>
-	<h5>Our footer</h5>
-
-</body>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</html>
+  <main class="content-container">
+    <div class="card">
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" name="Submit">
+      </form>
+    </div>
+  </main>
+{% endblock %}

@@ -133,7 +133,7 @@ def customer(request, pk_test):
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
 def createOrder(request, pk):
-	OrderFormSet = inlineformset_factory(Customer, Order, fields=('product', 'status'), extra=10 )
+	OrderFormSet = inlineformset_factory(Customer, Order, fields=('product', 'status'), extra=5 ) #extra=5 means 5 forms
 	customer = Customer.objects.get(id=pk)
 	formset = OrderFormSet(queryset=Order.objects.none(),instance=customer)
 	#form = OrderForm(initial={'customer':customer})

@@ -2,8 +2,18 @@
 
 {% block content %}
 
-		<br>
+<style>
+	.card table {
+			border-collapse: collapse; /* Ensure table borders do not affect spacing */
+			font-size: 14px;
+		}
 
+	.card table tr {
+			line-height: 1; /* Adjust the value as needed to reduce the row height */
+		}
+</style>
+		<br>
+<main class="products-container">
 		<div class="row">
 			<div class="col-md">
 				<div class="card card-body">
@@ -30,5 +40,6 @@
 			</div>
 			
 		</div>
+	</main>
 
 {% endblock content %}

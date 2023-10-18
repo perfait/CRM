@@ -1,13 +1,32 @@
 {%  extends 'accounts/main.html' %}
 {% load static %}
 {% block content %}
+<style>
+.order-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 80vh; /* Optionally, make the content container fill the viewport height */
+}
 
+.card.card-body {
+  background: #d0def0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
 
+    }
+}
+
+</style>
+
+<main class="order-container">
 <div class="row">
-	<div class="col-md-6">
+	<div class="col-md-12">
 		<div class="card card-body">
 
-			<form action="" method="POST">
+			<form action="" method="POST" style="font-size: 14px;">
 				{% csrf_token %}
 				{{ form.management_form }}
 				{% for field in form %}
@@ -21,6 +40,7 @@
 		</div>
 	</div>
 </div>
+</main>
 
 
 {% endblock %}
