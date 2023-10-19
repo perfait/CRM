@@ -89,10 +89,10 @@ STEPS FOR DJANGO POSTGRESQL DATABASE + AWS RDS
 
 '''
 
-'''
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'crm',
         'USER':'postgres',
         'PASSWORD':'puffnane1738',
@@ -108,7 +108,7 @@ DATABASES = {
     }
 }
 
-
+'''
 
 
 # Password validation
@@ -164,5 +164,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'perfaitakaka@gmail.com'
-EMAIL_HOST_PASSWORD = 'medjcutkvxinsxci'
+EMAIL_HOST_USER = 'pafeitakaka@gmail.com'
+EMAIL_HOST_PASSWORD = 'jryidffdyhulxhta'
