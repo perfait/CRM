@@ -9,7 +9,7 @@ class CustomerForm(ModelForm):
 	class Meta:
 		model = Customer
 		fields = '__all__'
-		exclude = ['profile_pic', 'date_created']
+		exclude = ['user']
 
 class OrderForm(ModelForm):
 	class Meta:
