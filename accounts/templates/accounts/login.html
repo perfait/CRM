@@ -49,6 +49,7 @@
 			background: #33ccff !important;
 			color: white !important;
 		}
+		}
 		.login_btn:focus {
 			box-shadow: none !important;
 			outline: 0px !important;
@@ -117,6 +118,9 @@
 				{% endfor %}			
 		
 				<div class="mt-4" style="font-size: 12px;">
+					<div class="d-flex justify-content-center links">
+						Before signing up, please <a href="https://github.com/perfait/CRM/blob/main/README.md" class="ml-2">check this out </a>
+					</div>
 					<div class="d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
 					</div>
