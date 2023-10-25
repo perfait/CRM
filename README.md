@@ -7,12 +7,12 @@ This is a simple demo customer management software.
 
 There are two types of accounts. User accounts and Admin accounts. 
 User accounts can only do the following: 
-1. View their information
+1. View their order progress
 2. Change their personal details such as name, email, phone number and profile picture.
 
 
 Admin accounts on the other hand can
-1. View
+1. View users
 2. Add users
 3. Delete users
 4. Edit user details
